@@ -2,12 +2,13 @@ import asyncio
 import aiohttp
 import json
 import datetime
+import time
 
 RawData = open('F000.json')
 Data = json.load(RawData)
 RawData.close()
 
-
+time.sleep(5)
 
 async def ARequest(Requests , http : str) -> str:
     async with Requests.get(http) as Response:
