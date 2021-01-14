@@ -33,6 +33,7 @@ async def lmnt(ASRequest, http , loop) -> None:
         print(datetime.datetime.now() - start)
         if (start - datetime.datetime.now()).total_seconds() < 0 :
             print("start")
+            time.sleep(5)
             while True:
                 loop.create_task(ARequest(ASRequest, http))
             
